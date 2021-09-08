@@ -1,0 +1,27 @@
+server:
+  port: 8013
+spring:
+  application:
+    name: ims-ms
+    id: ims
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/store_inventory
+    username: Inventory
+    password: locked
+
+async-pool:
+  corePoolSize: 5
+  maxPoolSize: 64
+  keepLiveSeconds: 100
+  queueCapacity: 250
+  threadNamePrifix: imsAsyncThread
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    instance:
+      prefer-ip-address: true
+
+

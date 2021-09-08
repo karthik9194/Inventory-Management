@@ -1,0 +1,29 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: zuul-ms
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    instance:
+      prefer-ip-address: true
+
+zuul:
+  sensitive-headers:
+
+  prefix: /api
+  routes:
+    ims-ms: /ims/**
+  ribbon:
+    eager-load:
+      enabled: true
+
+ribbon:
+  ReadTimeout: 120000
+  ConnectTimeout: 10000
+  MaxautoRetries: 1
+  MaxAutoRetriesNextServer: 1
+
