@@ -59,6 +59,9 @@ Below are the steps to bring up the development environment and get started.
 5) Start the Inventory Management service(ims) and can be accessed either through Swagger end-point http://localhost:8013/swagger-ui.html
 6) Access the Application at http://localhost:8013/</br></br>
 
+##Swagger URL
+![image](https://user-images.githubusercontent.com/90297817/132559024-51568bd2-61de-4157-ae19-3738193a2594.png)
+
 
 ### Help
 
