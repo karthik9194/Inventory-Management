@@ -1,23 +1,14 @@
 # Inventory Management Microservices 
 
 ### What is it?
+Inventory Management System(ims) built which helps to handling products stock warehouse, billing, Order and payment services for a retail Business.
 
 
-### Use case
-
-.
-
-Below are the screens of the application.
-
-![alt tag](https://github.com/vmudigal/microservices-sample/blob/version-5/documents/screens/_Web%20App/01.%20Home.png?raw=true)
-
-Clicking on the tab's one or two the data that you see on the screen is based on the data fetched by the respective service by calling its database.
 
 ### Components Integrated & Tools Usage
 ##### API Gateway
 
-Netflix Zuul is a the reverse proxy server which acts as the API Gateway for accessing the micro services behind the gateway which routes the request to the respective service. Microservice’s stay behind reverse proxy server and needs to be consumed via api gateway. The api-gateway micro service with docker profile runs on port 8080 and can be accessed by http://localhost:8080 .
-
+Netflix Zuul is a the reverse proxy server which acts as the API Gateway for accessing the micro services behind the gateway which routes the request to the respective service. Microservice’s stay behind reverse proxy server and needs to be consumed via api gateway. 
 Configuration done in API Gateway for Routing:
 ```
 zuul:
@@ -39,7 +30,7 @@ ribbon:
 
 ##### Service registration and discovery
 
-Registration and discovery is taken care by Eureka.During the startup of the individual services, they register with service registration service those details such as host name, port etc. by which the services can be accessed. Once the service is registered to the Eureka, consul checks for the health of the service by sending a heartbeat for the health check path and health check interval that has been registered with Consul. Requests to the micro-services has to be routed through api-gateway during with the api-gateway contacts discovery service to get the information required to send the request to the intended microservice.
+Registration and discovery is taken care by Eureka.During the startup of the individual services, they register with service registration service those details such as host name, port etc. by which the services can be accessed. 
 
 ### Technology
 
