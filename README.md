@@ -53,10 +53,11 @@ Microservices sample project uses a number of open source projects to work prope
 Below are the steps to bring up the development environment and get started.
 
 1) Install Git, Java and Gradle</br>
-2) For the project using https://github.com/vmudigal/microservices-sample.git
-3) 
-
-6) Access the Application at http://localhost/</br></br>
+2) For the project clone it using https://github.com/karthik9194/Inventory-Management.git
+3) Have to run the microservices in an order as below
+4) Start the Eureka Discovery Server and followed by zuul Gateway server
+5) Start the Inventory Management service(ims) and can be accessed either through Swagger end-point http://localhost:8013/swagger-ui.html
+6) Access the Application at http://localhost:8013/</br></br>
 
 
 ### Help
