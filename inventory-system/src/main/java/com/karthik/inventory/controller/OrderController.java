@@ -76,15 +76,16 @@ public class OrderController {
             int index = 0;
             while (orderDetails.size() > index)
             {
-                List<Product> productData = productRepository.findOneByProductid(orderDetails.get(index++).getProductId());
+                List<Product> productData = productRepository.findOneByProductid(orderDetails.get(index).getProductId());
                 if (productData == null) {
                     throw new ResourceNotFoundException("Product Details Could not be found: " + orderDetails.get(index++).getProductId());
                 }
                 else{
                     Map<String, Integer> map = new HashMap<String, Integer>();
-                    map.put(productData.get(0).getProductName(), orderDetails.get(index++).getQuantity());
+                    map.put(productData.get(0).getProductName(), orderDetails.get(index).getQuantity());
                     result.add(map);
                 }
+                index++;
             }
 
             return new ResponseEntity<>(result, HttpStatus.OK);
